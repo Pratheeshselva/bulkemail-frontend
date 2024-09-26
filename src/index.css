@@ -1,0 +1,127 @@
+body {
+    background: linear-gradient(to right, rgb(244, 241, 250), rgb(244, 237, 221));
+}
+
+
+.form{
+  width: 40%;
+  height: auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.form h1{
+    padding-bottom: 15%;
+    text-align: center;
+}
+
+.form-wrapper{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+
+input.error,
+select.error{
+    border-color: #fc8181;
+}
+
+.error{
+    color: red;
+}
+button:disabled{
+    opacity: 0.35;
+    color: antiquewhite;
+}
+
+.removedecor{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.deleteicon{
+  display: flex;
+}
+
+.cardbody{
+    display: flex;
+  justify-content: space-between;
+}
+
+
+.cradWrapper{
+    display: flex;
+    margin: 10px;
+}
+.Senderaddresswrapper{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.createaddressbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ padding-top: 10px;
+}
+
+.createaddressbuttonwrapper{
+
+margin: 20px;
+  
+    width: 100%;
+}
+
+.wholetemplatewrapper{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.templatewrapper{
+margin: 20px;
+height: 10px;
+}
+
+
+.templateparagraph{
+    display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+    }
+
+.sendmailboxwrapper{
+    margin: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.apppassword{
+    text-align: center;
+  
+}
+.buttonswrappertemplate {
+    display: flex;
+    align-items: center;
+}
+
+.send-button-wrapper {
+    display: flex;
+    align-items: center; 
+}
+
+.spinnerdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
