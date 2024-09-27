@@ -32,6 +32,7 @@ function Login() {
       toast.success(response.message)
       navigate('/')
     } catch (error) {
+      setLoading(false)
       toast.error(error.response.data.message || "An Error Occurred")
     }
   }
