@@ -23,7 +23,7 @@ function Users() {
       res.status(200).send({ message: "Data fetch successfull" })
 
     } catch (error) {
-      res.status(200).send({ message: `${error}` })
+      res.status(400).send({ message: `${error}` })
     }
   }
 

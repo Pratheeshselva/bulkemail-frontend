@@ -2,7 +2,7 @@ import Login from '../components/Login'
 import SignUp from '../components/SignUp'
 import Users from '../components/Users'
 import Home from '../components/Home'
-import ProtectedRoute from './AdminGuard'
+import ProtectedRoute from './ProtectedRoute'
 import AdminGuard from './AdminGuard'
 import SendersAddress from '../components/SendersAddress'
 import SingleTemplate from '../components/SingleTemplate'
@@ -29,7 +29,7 @@ const AppRoutes = [
         element: <Navigate to='/login' />
     },
     {
-        path: '/home',
+        path: '/',
         element: <ProtectedRoute><Home /></ProtectedRoute>
     },
     {

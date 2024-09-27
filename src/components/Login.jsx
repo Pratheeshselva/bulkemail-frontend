@@ -23,10 +23,10 @@ function Login() {
       let response = await api.post(ApiRoutes.LOGIN.path, data, {
         authenticate: ApiRoutes.LOGIN.authenticate
       })
-      toast.success(response.message)
       sessionStorage.setItem("token", response.token)
       sessionStorage.setItem("role", response.role)
-      navigate('/home')
+      toast.success(response.message)
+      navigate('/')
     } catch (error) {
       toast.error(error.response.data.message || "An Error Occurred")
     }

@@ -12,20 +12,14 @@ import TopBar from './common/TopBar'
 
 
 function CreateTemplate() {
-
   const navigate = useNavigate()
-
-  const createAndPostTemplate = async (data) => {
-
+  const createAndPostTemplate =  async(data) => {
     try {
-
-      let response = await api.post(ApiRoutes.CREATE_TEMPLATE.path, data, {
-        authenticate: ApiRoutes.CREATE_TEMPLATE.authenticate
-      })
+     let response = await api.post(ApiRoutes.CREATE_TEMPLATE.path,data,{authenticate:ApiRoutes.CREATE_TEMPLATE.authenticate})
       toast.success(response.message)
-      navigate('/home')
+      navigate('/')
     } catch (error) {
-      toast.error(error.response.message || "An Error Occurred")
+      toast.error(error.message || "An Error Occurred")
     }
   }
 
@@ -33,9 +27,9 @@ function CreateTemplate() {
 
   const { values, handleBlur, handleChange, handleSubmit, errors, touched } = useFormik({
     initialValues: {
-      templatename: "",
-      subject: "",
-      body: "",
+      templatename:"",
+      subject:"",
+      body:"",
 
     },
     validationSchema: CreateTemplateSchema,
