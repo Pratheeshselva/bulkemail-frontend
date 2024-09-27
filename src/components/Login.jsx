@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom'
@@ -8,21 +8,25 @@ import api from '../service/apiService'
 import ApiRoutes from '../utils/ApiRoutes';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
+
 
 
 
 
 function Login() {
+  const [loading, setLoading] = useState(false)
 
   const navigate = useNavigate()
 
   const handleLogin = async (data) => {
 
     try {
-
+  setLoading(true)
       let response = await api.post(ApiRoutes.LOGIN.path, data, {
         authenticate: ApiRoutes.LOGIN.authenticate
       })
+      setLoading(false)
       sessionStorage.setItem("token", response.token)
       sessionStorage.setItem("role", response.role)
       toast.success(response.message)
@@ -69,9 +73,12 @@ function Login() {
             <br></br>
             <p>Don't have an account? <Link to='/signup'> Register Here!</Link></p>
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          {
+            loading ? <div className='spinnerdiv'><Spinner animation='border' role='status'><span className='visually-hidden'>Sending email...</span></Spinner></div> : <Button variant="primary" type="submit">Submit   </Button>
+          }
+
+            
+          
         </Form>
       </div>
     </div>
