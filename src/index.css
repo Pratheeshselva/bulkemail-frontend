@@ -80,7 +80,6 @@ margin: 20px;
 
 .wholetemplatewrapper{
     margin: 20px;
-    display: flex;
     flex-wrap: wrap;
 }
 
@@ -125,3 +124,4 @@ height: 10px;
     justify-content: center;
     align-items: center; 
 }
+

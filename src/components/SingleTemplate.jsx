@@ -175,7 +175,7 @@ function SingleTemplate(state) {
             })
             toast.success(response.message)
             setLoading(false)
-            navigate('/home')
+            navigate('/')
 
         } catch (error) {
             setLoading(false)
@@ -189,7 +189,7 @@ function SingleTemplate(state) {
             const updatedData = { ...data, body: !textformatting ? data.body : '', html: textformatting ? quillValue : '' }
             let response = await api.put(ApiRoutes.SAVE_EDITED_TEMPLATE.path, updatedData, { authenticate: ApiRoutes.SAVE_EDITED_TEMPLATE.authenticate })
             toast.success(response.message || "Template updated successfully!");
-            navigate('/home')
+            navigate('/')
 
 
         } catch (error) {

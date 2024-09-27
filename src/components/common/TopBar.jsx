@@ -12,7 +12,7 @@ function TopBar() {
     let options=[
       {
         value:'Home',
-        path:'/home',
+        path:'/',
         role:["admin","user"]
     },
         {
@@ -37,7 +37,7 @@ function TopBar() {
   return <>
    <Navbar expand="lg" className="bg-body-tertiary">
   <Container>    
-     <Navbar.Brand className=''><Link to='/home' className='removedecor'>Bulk Mailer</Link></Navbar.Brand>
+     <Navbar.Brand className=''><Link to='/' className='removedecor'>Bulk Mailer</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

@@ -46,8 +46,10 @@ function Home() {
 
   return <>
     <Topbar />
-
+   
     <div className='wholetemplatewrapper'>
+    <div className='templatedahboard'>
+    <h3>Templates</h3></div>
       {
         templates.map((e) => (
           <TemplateCard data={e} key={e.id} onClick={() => handleSelectedTemplate(e)} onDelete={() => deleteTemplate(e.id)} />
