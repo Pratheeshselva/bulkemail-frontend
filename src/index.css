@@ -79,13 +79,22 @@ margin: 20px;
 }
 
 .wholetemplatewrapper{
-    margin: 20px;
-    flex-wrap: wrap;
+ margin: 20px;
+ display: flex;
+ flex-wrap: wrap;
 }
 
 .templatewrapper{
 margin: 20px;
-height: 10px;
+
+
+
+}
+
+.templatedahboard{
+display: block;
+text-align: center;
+margin: 20px;
 }
 
 
