@@ -79,7 +79,7 @@ function SendersAddress() {
   })
   return <>
     <TopBar /><br></br>
-    <div className='apppassword'>Link to create app password - <a href="https://myaccount.google.com/apppasswords" target="_blank">https://myaccount.google.com/apppasswords</a></div>
+    <div className='apppassword'>Link to create app password - <a href="https://myaccount.google.com/apppasswords" target="_blank">https://myaccount.google.com/apppasswords</a><br/>Paste the app password without any spaces in-between them</div>
     <div className='createaddressbuttonwrapper'>
       <div className='formwrapper'>
         <Form onSubmit={handleSubmit}>
